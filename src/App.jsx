@@ -3,53 +3,41 @@ import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import MovieList from "./components/MovieList";
 import { Rating } from "react-simple-star-rating";
-import Modal from "./components/Modal";
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const [movie, movieSet] = useState();
   const [films, setFilms] = useState([]);
   const [rating, setRating] = useState(3);
-  const [selectedMovie, setSelectedMovie] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  // const [page, setPage] = useState(1)
+  const [page, setPage] = useState(1)
 
-  function handleCloseModal() {
-    setSelectedMovie(null);
+  async function fetchData () {
+    const url = `https://api.themoviedb.org/3/discover/movie?api_key=8616bd50fe3be649603bd33d955499f3&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&vote_average.gte=${rating * 2 - 2}&vote_average.lte=${rating * 2}&with_watch_monetization_types=flatrate`
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      const newFilms = data.results;
+      setPage((prevPage) => prevPage + 1)
+      setFilms((prevFilms) => [...prevFilms, ...newFilms])
+    } catch (err) {
+      console.log(err)
+    }
   }
-
-  function handleOpenModal() {
-    setSelectedMovie(movie);
-  }
-
-  // async function fetchData () {
-  //   const url = `https://api.themoviedb.org/3/discover/movie?api_key=8616bd50fe3be649603bd33d955499f3&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&vote_average.gte=${moviesRating - 2}&vote_average.lte=${moviesRating}&with_watch_monetization_types=flatrate`
-
-  //   try {
-  //     const response = await fetch(url);
-  //     const data = await response.json();
-  //     const newFilms = data.results;
-  //     setPage((prevPage) => prevPage + 1)
-  //     setFilms((prevFilms) => [...prevFilms, ...newFilms])
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }
 
   // llamo la funcion fetch data al montar el componente
-  // useEffect(() => {
-  //   fetchData();
-  // }, [])
+  useEffect(() => {
+    fetchData();
+  }, [])
 
   useEffect(() => {
-    const moviesRating = rating * 2;
     const getMovie = async function () {
       const response = await axios.get(
         `
       https://api.themoviedb.org/3/discover/movie?api_key=8616bd50fe3be649603bd33d955499f3&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&vote_average.gte=${
-        moviesRating - 2
-      }&vote_average.lte=${moviesRating}&with_watch_monetization_types=flatrate`
+       rating * 2 - 2 
+      }&vote_average.lte=${rating * 2}&with_watch_monetization_types=flatrate`
       );
       setFilms(response.data.results);
       setIsLoading(false);
@@ -65,23 +53,15 @@ function App() {
   return (
     <div className="main-container">
       <div className="text-center mb-3 header">
-      {/* <Routes>
-        <Route path="/" element={<MovieList />} />
-      </Routes> */}
         <Header />
         <Rating
           onClick={(value) => handleRating(value)}
           initialValue={rating}
         />
       </div>
-      <MovieList films={films} />
-      {/* fetchData={fetchData} */}
-      {selectedMovie && (
-        <>
-          <div className="backdrop"></div>
-          <Modal movies={selectedMovie} closeModal={handleCloseModal} />
-        </>
-      )}
+      <Routes>
+        <Route path="/" element={<MovieList films={films} fetchData={fetchData}/>} />
+      </Routes>
     </div>
   );
 }

@@ -1,24 +1,9 @@
-import Modal from "./Modal";
 import Movie from "./Movie";
-import { useState } from "react";
 import React from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 
 function MovieList({ films, fetchData }) {
-
-  const [selectedMovie, setSelectedMovie] = useState(null);
-
-
-
-  function openModal(film) {
-    setSelectedMovie(film);
-  }
-
-  function handleCloseModal() {
-    setSelectedMovie(null);
-  }
-
 
   return (
     <div className="container">
@@ -38,14 +23,11 @@ function MovieList({ films, fetchData }) {
             return (
               <div key={film.id} className="col-3">
                 <div>
-                  <Movie film={film} openModal={openModal} />
+                  <Movie film={film} />
                 </div>
               </div>
             );
           })}
-          {selectedMovie && (
-            <Modal movie={selectedMovie} closeModal={handleCloseModal} />
-          )}
         </div>
       </InfiniteScroll>
     </div>

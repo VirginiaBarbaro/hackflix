@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../movie.css";
 import Carousel from "./Carousel";
 
@@ -24,9 +25,9 @@ function Header() {
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav list-unstyled">
               <li className="nav-item home-list">
-                <a className="home" aria-current="page">
+                <Link to="/" className="home" aria-current="page">
                   Home
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
