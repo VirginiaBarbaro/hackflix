@@ -5,6 +5,8 @@ import MovieList from "./components/MovieList";
 import { Rating } from "react-simple-star-rating";
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
+import MovieDetails from "./components/MovieDetails";
+import { useParams } from "react-router-dom";
 
 function App() {
   const [films, setFilms] = useState([]);
@@ -58,10 +60,11 @@ function App() {
           onClick={(value) => handleRating(value)}
           initialValue={rating}
         />
-      </div>
       <Routes>
         <Route path="/" element={<MovieList films={films} fetchData={fetchData}/>} />
+        <Route path="/movie/:id" element={<MovieDetails />} />
       </Routes>
+      </div>
     </div>
   );
 }

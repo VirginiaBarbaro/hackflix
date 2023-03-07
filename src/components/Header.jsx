@@ -6,13 +6,13 @@ import Carousel from "./Carousel";
 function Header() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-lg nav-header">
         <div className="container-fluid">
           <h5 className="hackflix-navbar mt-2">
             HackFlix
           </h5>
           <button
-            className="navbar-toggler"
+            className="navbar-toggler "
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -33,9 +33,6 @@ function Header() {
           </div>
         </div>
       </nav>
-      <div className="carousel mb-4">
-        <Carousel />
-      </div>
       <div className="hero-container row">
         <h5 className="header-h5">Filter by </h5>
       </div>

@@ -95,7 +95,7 @@ background-color: rgba(240, 1, 1, 0.249);
     background-color: #202020;
 }
 
-.backdrop {
+/* .backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -105,11 +105,7 @@ background-color: rgba(240, 1, 1, 0.249);
     z-index: 99;
     backdrop-filter: blur(10px);
     transition: opacity 0.3s ease;
-}
-
-.container-carousel {
-    height: 350px;
-}
+} */
 
 .img-carousel {
     aspect-ratio: 16/9;
@@ -127,4 +123,30 @@ background-color: rgba(240, 1, 1, 0.249);
     float: right;
     color: wheat;
     text-decoration: none;
+}
+
+.nav-header {
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,0.5164081990217962) 0%, rgba(35,156,61,0.77) 69%);
+}
+
+.container-details {
+    padding: 20px;
+}
+
+.detail-title {
+    color: whitesmoke;
+    margin-bottom: 50px;
+}
+
+.detail-description {
+    margin-top: 60px;
+    margin-bottom: 70px;
+    color: #f5f5f5;
+}
+
+.middle-div {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
 }
