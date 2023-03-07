@@ -57,8 +57,8 @@ function App() {
     <div className="main-container">
       {/* <div className="text-center mb-3 header"> */}
       <Header />
-      <div className="hero-container row">
-        <h5 className="header-h5">Filter by </h5>
+      <h5 className="header-h5">Filter by </h5>
+      <div className="text-center">
         <Rating onClick={(value) => handleRating(value)} initialValue={rating} />
       </div>
       <Routes>

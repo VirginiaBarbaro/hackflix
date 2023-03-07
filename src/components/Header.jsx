@@ -22,7 +22,7 @@ function Header() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse">
-            <ul className="navbar-nav list-unstyled">
+            <ul className="ms-auto navbar-nav list-unstyled">
               <li className="nav-item home-list">
                 <Link to="/" className="home" aria-current="page">
                   Home
@@ -32,9 +32,6 @@ function Header() {
           </div>
         </div>
       </nav>
-      {/* <div className="hero-container row">
-        <h5 className="header-h5">Filter by </h5>
-      </div> */}
     </>
   );
 }
