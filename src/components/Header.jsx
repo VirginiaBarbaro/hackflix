@@ -28,6 +28,11 @@ function Header() {
                   Home
                 </Link>
               </li>
+              <li className="nav-item home-list">
+                <Link to="/filtered-by-rating" className="home" aria-current="page">
+                  Filter films
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -60,41 +60,6 @@ body {
     font-size: 1.2rem;
 }
 
-.btn-close-modal {
-    border: none;
-    font-size: 1.2rem;
-    background-color: transparent;
-    float: right;
-}
-
-.btn-close-modal:hover {
-    color: rgba(240, 1, 1, 0.567);
-}
-
-.btn-open-modal {
-    border-radius: 10px;
-    padding: 3px;
-    width: 25%;
-    background-color: rgba(240, 1, 1, 0.567);
-    border: none;
-}
-
-.btn-open-modal:hover {
-background-color: rgba(240, 1, 1, 0.249);
-}
-
-.container-modal {
-    padding: 15px;
-    position: fixed;
-    top: 50vh;
-    left: 25vw;
-    color: #fcf9be;
-    width: 50%;
-    margin: auto;
-    border: 1px solid green;
-    background-color: #202020;
-}
-
 /* .backdrop {
     position: fixed;
     top: 0;
@@ -152,4 +117,21 @@ background: linear-gradient(90deg, rgba(2,0,36,0.5164081990217962) 0%, rgba(35,1
 
 .hero-container {
     text-align: center;
+}
+
+.spinner {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.noMatch {
+    width: 50%;
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.btn-noMatch {
+    margin-top: 20px;
+    text-align: center;    
 }
