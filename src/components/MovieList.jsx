@@ -13,6 +13,7 @@ function MovieList({ films, fetchData }) {
         dataLength={films.length} //This is important field to render the next data
         next={fetchData}
         hasMore={true}
+        style={{overflow: "hidden"}}
         loader={<h4 className="text-white">Loading...</h4>}
         endMessage={
           <p style={{ textAlign: "center" }}>

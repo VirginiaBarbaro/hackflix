@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../movie.css";
-import Carousel from "./Carousel";
 
 function Header() {
   return (
@@ -33,9 +32,9 @@ function Header() {
           </div>
         </div>
       </nav>
-      <div className="hero-container row">
+      {/* <div className="hero-container row">
         <h5 className="header-h5">Filter by </h5>
-      </div>
+      </div> */}
     </>
   );
 }
