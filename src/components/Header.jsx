@@ -33,6 +33,16 @@ function Header() {
                   Filter films
                 </Link>
               </li>
+              <li className="nav-item home-list">
+                <Link to="/about-us" className="home" aria-current="page">
+                  About us
+                </Link>
+              </li>
+              <li className="nav-item home-list">
+                <Link to="/contact" className="home" aria-current="page">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

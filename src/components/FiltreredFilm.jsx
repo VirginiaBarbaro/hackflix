@@ -10,6 +10,8 @@ function FilteredFilms() {
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [filteredFilms, setFilteredFilms] = useState([]);
+  const [title, setTitle] = useState("");
+
 
   useEffect(() => {
     const getMovie = async function () {
@@ -47,14 +49,39 @@ function FilteredFilms() {
   };
 
   const handleNextPage = () => {
-    console.log("Estoy en el final");
+    console.log(`Termina page: ${page}` );
     setPage((prevPage) => prevPage + 1);
   };
 
+  const searchByTitle = async () => {
+    const response = await axios.get(`
+    https://api.themoviedb.org/3/search/movie?api_key=8616bd50fe3be649603bd33d955499f3&language=en-US&query=title${title}&include_adult=false`)
+    setTitle(response.data.results)
+  }
+
+  useEffect(() => {
+    searchByTitle();
+  }, [])
+
+  const handleSearch = e => {
+    setTitle(e.target.value)
+    console.log("Busqueda: " + e.target.value)
+  }
+
+
+
+  // onSubmit={(event)
+  // (event) => setTitle(event.target.value)
+
   return (
     <div>
-      <h5 className="header-h5">Filter by </h5>
-      <div className="text-center">
+      <h5 className="header-h5">Filter by rating or title</h5>
+      <div className="text-center form-rating">
+        <form className="form-rating"> 
+          <label className="label-search"><i className="bi bi-search"></i></label>
+          <input className="input-search" type="text"  onChange={handleSearch}/>
+          <button className="badge rounded-pill text-bg-success btn-search" type="submit">Search</button>
+        </form>
         <Rating onClick={(value) => handleRating(value)} initialValue={rating} />
       </div>
       <InfiniteScroll
@@ -64,8 +91,8 @@ function FilteredFilms() {
         style={{ overflow: "hidden" }}
         loader={
           <div className="spinner">
-            <button class="btn btn-success" type="button" disabled>
-              <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+            <button className="btn btn-success" type="button" disabled>
+              <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
               Loading...
             </button>
           </div>
