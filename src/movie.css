@@ -211,7 +211,7 @@ body {
 }
 
 .img-about {
-  max-height: 590px;
+  max-height: 589px;
 }
 
 .label-contact {
@@ -264,6 +264,7 @@ body {
 }
 
 .input-search {
+    padding: 7px;
     margin-top: 13px;
     border-radius: 15px;
     height: 50%;
@@ -276,6 +277,37 @@ body {
 .btn-search {
     margin: 13px;
     height: 50%;
+}
+
+.footer {
+  padding: 10px;
+ width: 100%;
+}
+
+.icon-footer {
+  text-align: center;
+  margin: auto;
+  width: 30%;
+  margin-top: 50px;
+}
+
+.bi {
+  font-size: 1.5rem;
+}
+
+.footer-element {
+  font-size: 1rem;
+}
+
+.icon-copyright {
+  margin-top: 115px;
+  width: 100%;
+}
+
+.container-movieList {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
 }
 
 /* .main-noMatch {

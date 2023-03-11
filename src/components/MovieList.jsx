@@ -29,7 +29,7 @@ function MovieList() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container-movieList">
       <div className="carousel mb-4">
         <Carousel />
       </div>
