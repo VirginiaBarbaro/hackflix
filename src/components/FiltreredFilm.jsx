@@ -73,8 +73,9 @@ function FilteredFilms() {
     console.log(e.target.value);
   };
 
-  const filteredResults = filteredFilms.filter((film) => 
-  film.title.toLowerCase().includes(search.toLowerCase()))
+  const filteredResults = filteredFilms.filter((film) =>
+    film.title.toLowerCase().includes(search.toLowerCase()),
+  );
 
   // const results = [];
   // if (!search) {
@@ -105,41 +106,45 @@ function FilteredFilms() {
         </form>
         <Rating onClick={(value) => handleRating(value)} initialValue={rating} />
       </div>
-      <InfiniteScroll
-        dataLength={filteredFilms.length} //This is important field to render the next data
-        next={handleNextPage}
-        hasMore={true}
-        style={{ overflow: "hidden" }}
-        loader={
-          <div className="spinner">
-            <button className="btn btn-success" type="button" disabled>
-              <span
-                className="spinner-grow spinner-grow-sm"
-                role="status"
-                aria-hidden="true"
-              ></span>
-              Loading...
-            </button>
-          </div>
-        }
-        endMessage={
-          <p style={{ textAlign: "center" }}>
-            <b>Yay! You have seen it all</b>
-          </p>
-        }
-      >
-        <div className="row">
-          {filteredResults.map((film) => {
-            return (
-              <div key={film.id} className="col-3">
-                <div>
-                  <Movie film={film} />
+      <div className="container">
+        <InfiniteScroll
+          dataLength={filteredFilms.length} //This is important field to render the next data
+          next={handleNextPage}
+          hasMore={true}
+          style={{ overflow: "hidden" }}
+          loader={
+            <div className="spinner">
+              <button className="btn btn-success" type="button" disabled>
+                <span
+                  className="spinner-grow spinner-grow-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+                Loading...
+              </button>
+            </div>
+          }
+          endMessage={
+            <p style={{ textAlign: "center" }}>
+              <b>Yay! You have seen it all</b>
+            </p>
+          }
+        >
+          <div className="row">
+            {/* <div className="col-4"> */}
+            {filteredResults.map((film) => {
+              return (
+                <div key={film.id} className="col-12 col-sm-6 col-md-4 col-lg-3">
+                  <div>
+                    <Movie film={film} />
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-      </InfiniteScroll>
+              );
+            })}
+            {/* </div> */}
+          </div>
+        </InfiniteScroll>
+      </div>
     </div>
   );
 }

@@ -55,7 +55,7 @@ function MovieList() {
         <div className="row">
           {films.map((film) => {
             return (
-              <div key={film.id} className="col-3">
+              <div key={film.id} className="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div>
                   <Movie film={film} />
                 </div>
