@@ -86,10 +86,10 @@ function FilteredFilms() {
   // (event) => setTitle(event.target.value)
 
   return (
-    <div>
+    <div className="row">
       <h5 className="header-h5">Filter by rating or title</h5>
       <div className="text-center form-rating">
-        <form className="form-rating">
+        <form>
           <label className="label-search">
             <i className="bi bi-search"></i>
           </label>
