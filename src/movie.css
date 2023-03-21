@@ -38,9 +38,9 @@ body {
   cursor: pointer;
 }
 
-.movie:hover {
+/* .movie:hover {
   transform: scale(1.1);
-}
+} */
 
 .img {
   cursor: pointer;
@@ -78,7 +78,7 @@ body {
 }
 
 .home:hover {
-  color: rgb(17, 162, 17);
+  color: rgb(45, 197, 45);
 }
 
 .nav-header {
@@ -313,3 +313,25 @@ body {
     width: 100%;
     background-image: url("https://images.unsplash.com/photo-1566320238645-032c8c55845a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
 } */
+
+/* Probando Blur */
+
+.rating {
+  position: absolute;
+  z-index: 1;
+  left: 25%;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 25px rgb(20, 8, 5);
+  backdrop-filter: blur(5px);
+  font-size: 1.2rem;
+  color: rgb(25, 154, 2);
+  /* display: grid;
+  place-items: center; */
+}
+
+.card-film {
+  position: relative;
+}
