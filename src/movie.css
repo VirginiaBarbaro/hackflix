@@ -255,7 +255,7 @@ body {
   justify-content: baseline;
 }
 
-@media (max-width: 576px ) {
+@media (max-width: 576px) {
   .form-rating {
     flex-wrap: wrap;
     display: block;
@@ -335,3 +335,13 @@ body {
 .card-film {
   position: relative;
 }
+
+/* .hero-image {
+  background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 70%,
+      rgba(255, 255, 255, 0.278) 89%,
+      rgba(255, 255, 255, 0.803) 96%,
+      rgb(255, 255, 255) 100%
+    ),
+    url("/public/img/hero_image_2.webp"); */
