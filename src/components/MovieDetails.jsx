@@ -23,31 +23,42 @@ function MovieDetails() {
   return (
     <>
       {selectedMovie ? (
-        <div className="container container-details ">
-          <div className="row">
-            <div className="col-4">
-              <div className="container-detail-img">
-                <img
-                  src={`https://image.tmdb.org/t/p/w440_and_h660_face${selectedMovie.poster_path}`}
-                  className="img-fluid rounded w-75"
-                  alt={selectedMovie.title}
-                />
-              </div>
-            </div>
-            <div className="info-container col-8">
-              <h2 className="detail-title">{selectedMovie.title}</h2>
-              <p className="detail-description">{selectedMovie.overview}</p>
-              <div className="middle-div">
-                <p className="text-white">Release date: {selectedMovie.release_date}</p>
-                <small className="text-white">
-                  {selectedMovie.vote_count} people voted for this movie
-                </small>
-                <p className="text-white">Rating: {selectedMovie.vote_average}</p>
+        <div className="big-container">
+        <div className="container">
+          <div className="row g-5 justify-content-evenly">
+            <div className="col-lg-8">
+              <div className="card details-movie">
+                <div className="row g-0">
+                  <div className="col-8 col-md-5 m-auto">
+                    <img
+                      src={`https://image.tmdb.org/t/p/w440_and_h660_face${selectedMovie.poster_path}`}
+                      className="card-img img-fluid rounded"
+                      alt={selectedMovie.title}
+                    />
+                  </div>
+                  <div className="col-6 col-md-7 col-sm-12 m-auto">
+                    <div className="card-body d-flex flex-column">
+                      <div className="h-100 ms-5 mb-5">
+                        <h2 className="card-title text-white">{selectedMovie.title}</h2>
+                        <p className="text-white card-text">{selectedMovie.overview}</p>
+                        <p className="text-white card-text">
+                          Release date: {selectedMovie.release_date}
+                        </p>
+                        <p className="text-white card-text">
+                          {selectedMovie.vote_count} people voted for this movie
+                        </p>
+                        <p className="text-white">Rating: {selectedMovie.vote_average}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        </div>
       ) : (
+        // </div>
         <button className="btn btn-primary" type="button" disabled>
           <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
           Loading...
