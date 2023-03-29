@@ -87,7 +87,6 @@ function FilteredFilms() {
 
   return (
     <div className="row">
-      <h5 className="header-h5">Filter by rating or title</h5>
       <div className="text-center form-rating">
         <form>
           <label className="label-search">

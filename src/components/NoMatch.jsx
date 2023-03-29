@@ -8,9 +8,9 @@ function NoMatch() {
         Page not found!
       </div>
       <Link to="/">
-      <div className="btn-noMatch">
-        <button className="btn btn-success"> ← Back Home</button>
-      </div>
+        <div className="btn-noMatch">
+          <button className="btn btn-success"> ← Back Home</button>
+        </div>
       </Link>
     </div>
   );

@@ -64,6 +64,7 @@ function Carousel() {
             className="img-fluid w-100 img-carousel"
             alt="image-film"
           />
+          <div className="carousel-fade"></div>
         </div>
         <div className="container-carousel">
           <img
@@ -71,6 +72,7 @@ function Carousel() {
             className="img-fluid w-100 img-carousel"
             alt="image-film"
           />
+          
         </div>
         <div className="container-carousel">
           <img

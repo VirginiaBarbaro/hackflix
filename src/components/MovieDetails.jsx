@@ -26,7 +26,7 @@ function MovieDetails() {
         <div className="big-container">
         <div className="container">
           <div className="row g-5 justify-content-evenly">
-            <div className="col-lg-8">
+            <div className="col-md-6 col-lg-6">
               <div className="card details-movie">
                 <div className="row g-0">
                   <div className="col-8 col-md-5 m-auto">
