@@ -35,7 +35,7 @@ function Header() {
           </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="">
+          <Nav className="ms-auto align-item-center">
               <Nav.Link className="nav-link">
                 <ul className="navbar-nav list-unstyled d-flex justify-content-end">
                   <li className="nav-item home-list">

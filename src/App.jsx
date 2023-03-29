@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="main-container">
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<MovieList />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
