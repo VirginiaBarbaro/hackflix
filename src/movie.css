@@ -61,7 +61,6 @@ body {
   margin-top: 8px;
   font-size: 0.9rem;
 }
-
 .movie {
   margin-top: 15px;
   display: grid;
@@ -298,11 +297,55 @@ body {
   justify-content: baseline;
 }
 
+.form-control-contact {
+  padding: 2rem !important;
+}
+
+.title-contact-us {
+  color: #f5f5f5bb;
+}
+
+.formulary {
+  padding: 3rem 1.5rem 3rem 1.5rem;
+  background-color: #3a3d399d;
+  backdrop-filter: blur(20px);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
+  color: green !important;
+}
+
+.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #f5f5f5b9 !important;
+}
+
+.css-v4u5dn-MuiInputBase-root-MuiInput-root::after {
+  border-bottom: 2px solid green !important;
+}
+
+.css-v4u5dn-MuiInputBase-root-MuiInput-root::before {
+  border-bottom: 2px solid #f5f5f5b9 !important;
+}
+
+.css-v4u5dn-MuiInputBase-root-MuiInput-root {
+  color: #fcf9be !important;
+}
+
 @media (max-width: 576px) {
   .form-rating {
     flex-wrap: wrap;
     display: block;
   }
+}
+
+.back-home-contact:hover {
+  color: green !important;
+}
+
+.btn-send-contact {
+  padding: 0 !important;
 }
 
 .input-search {
@@ -385,8 +428,7 @@ body {
   width: 100%;
   position: fixed;
   top: 0px;
-  z-index: 100;
-  
+  z-index: 100; 
 }
 
 .navbar-dynamic {

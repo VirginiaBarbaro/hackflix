@@ -1,50 +1,64 @@
 import React from "react";
+import TextField from "@mui/material/TextField";
+import FormControl from "@mui/material/FormControl";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 
 function Contact() {
   return (
-    <div>
-      <h1 className="h1-contact">Contact Us</h1>
-      <form className="contact-form">
-        <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label label-contact">
-            Fullname
-          </label>
-          <input
-            type="text"
-            className="form-control input-contact" 
-            id="exampleFormControlInput1"
-            placeholder="Type your name"
-          />
-          <label for="exampleFormControlInput1" className="form-label label-contact">
-            Email
-          </label>
-          <input
-            type="email"
-            className="form-control input-contact"
-            id="exampleFormControlInput1"
-            placeholder="email@example.com"
-          />
+    <>
+      <Header />
+      <div className="form-admin-create-product w-50 m-auto form-login">
+        <div className="container p-3 mt-5">
+          <div className="row p-3 formulary mt-4">
+            <FormControl className="col-md-8 col-lg-8 m-auto form-control-contact">
+              <h4 className="title-contact-us">Contact us</h4>
+              <label htmlFor="firstname" id="firstname"></label>
+              <TextField
+                id="standard-basic"
+                label="Firstname"
+                variant="standard"
+                className="my-2 input-form"
+                name="name"
+              />
+
+              <label htmlFor="lastname" id="lastname"></label>
+              <TextField
+                id="standard-basic"
+                label="Lastname"
+                variant="standard"
+                className="my-2"
+                name="description"
+              />
+
+              <label htmlFor="email" id="email"></label>
+              <TextField
+                id="standard-basic"
+                label="Email"
+                variant="standard"
+                className="my-2"
+                name="price"
+              />
+
+              <label htmlFor="comment" id="comment"></label>
+              <TextField
+                id="standard-basic"
+                label="Your comment"
+                variant="standard"
+                className="my-2"
+                name="stock"
+              />
+              <div className="d-flex justify-content-between">
+                <Link to="/" className="back-home-contact mt-4">
+                  <i className="bi bi-arrow-left text-light back-home-contact"></i>
+                </Link>
+                <button type="button" class="btn btn-outline-success btn-send-contact">Send</button>
+              </div>
+            </FormControl>
+          </div>
         </div>
-        <div className="mb-3">
-          <label for="exampleFormControlTextarea1" className="form-label  label-contact">
-            Comment
-          </label>
-          <textarea
-            className="form-control input-contact"
-            id="exampleFormControlTextarea1"
-            rows="3"
-            placeholder="Write here..."
-          ></textarea>
-        </div>
-        <div className="btn-contact">
-          <Link to="/">
-          <button className="btn btn-primary"> ← Back Home</button>
-          </Link>
-          <button className="btn btn-success">Send</button>
-        </div>
-      </form>
-    </div>
+      </div>
+    </>
   );
 }
 
