@@ -3,16 +3,13 @@ import { Link } from "react-router-dom";
 
 function NoMatch() {
   return (
-    <div className="main-noMatch">
-      <div className="alert alert-warning noMatch" role="alert">
-        Page not found!
-      </div>
-      <Link to="/">
-        <div className="btn-noMatch">
-          <button className="btn btn-success"> ← Back Home</button>
-        </div>
-      </Link>
-    </div>
+    <div className="text-center error">
+    <img src="/Error404.png" alt="404 error" className="w-50 img-error" />
+    <h1>There's nothing here: Error 404! </h1>
+    <Link to={"/"}>
+      <button className="btn text-white footer-cta mt-4">Back home</button>
+    </Link>
+  </div>
   );
 }
 

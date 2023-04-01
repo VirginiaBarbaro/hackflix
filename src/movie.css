@@ -11,7 +11,6 @@ body {
 }
 
 .details-movie {
-  border: 1px solid red !important;
   border: none;
   background-color: transparent;
 }
@@ -44,23 +43,6 @@ body {
   }
 }
 
-.header-h5 {
-  color: #fcf9be;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 1.8rem;
-}
-
-.h5 {
-  color: #fcf9be;
-  text-align: center;
-}
-
-.p {
-  color: #fcf9be;
-  margin-top: 8px;
-  font-size: 0.9rem;
-}
 .movie {
   margin-top: 15px;
   display: grid;
@@ -157,13 +139,6 @@ body {
   text-align: center;
 }
 
-.noMatch {
-  width: 50%;
-  margin: auto;
-  margin-top: 10%;
-  text-align: center;
-}
-
 .btn-noMatch {
   margin-top: 20px;
   text-align: center;
@@ -175,72 +150,10 @@ body {
   color: #fcf9be;
 }
 
-.h2-about {
-  width: 50%;
-  margin: auto;
-  text-align: center;
-  margin-top: 50px;
-  font-size: 2.5rem;
-  -webkit-animation: puff-in-top 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s both;
-  animation: puff-in-top 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s both;
-}
-
-@-webkit-keyframes puff-in-top {
-  0% {
-    -webkit-transform: scale(2);
-    transform: scale(2);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-    -webkit-filter: blur(4px);
-    filter: blur(4px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes puff-in-top {
-  0% {
-    -webkit-transform: scale(2);
-    transform: scale(2);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-    -webkit-filter: blur(4px);
-    filter: blur(4px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: 50% 0%;
-    transform-origin: 50% 0%;
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-
-.h3-about {
-  width: 90%;
-  text-align: center;
-  margin: auto;
-  padding: 5px;
-  font-size: 2.5rem;
-  margin-top: 90px;
-  font-weight: 700;
-  -webkit-animation: puff-in-top 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s both;
-  animation: puff-in-top 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s both;
-}
-
-.img-about {
-  max-height: 589px;
+.error {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
 }
 
 .label-contact {
@@ -533,6 +446,17 @@ body {
   }
 }
 
+.card-description-details{
+  padding-top: 2rem !important;
+}
+
 .btn-send {
   border-radius: 20px;
+}
+
+@media (max-width: 576px) {
+  .card-description-details {
+
+    width: 100% !important;
+  }
 }

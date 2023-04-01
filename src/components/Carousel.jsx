@@ -43,6 +43,7 @@ function Carousel() {
 
   return (
     <div>
+      <h2 className="carousel-caption">Welcome to Hackflix</h2>
       <Slider {...settings}>
         <div className="container-carousel">
           <img
