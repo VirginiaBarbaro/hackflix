@@ -1,39 +1,79 @@
 import React from "react";
 import Header from "./Header";
+import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
     <>
       <Header />
-      <div className="container-row d-flex">
-        <div className="img-about">
-          <img
-            src="https://images.unsplash.com/photo-1649110458068-fc092543c056?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGZpbG1zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
-            className="img-about"
-          />
-        </div>
-        <div className="col-6 about-title">
-          <h2 className="h2-about">The Hackflix story</h2>
-          <h3 className="h3-about">
-            Stories move us. They make us feel more emotion, see new perspectives, and bring us
-            closer to each other.
-          </h3>
-          <div className="col-6 footer">
-            <div className="icon-copyright">
-              <div className="icon-footer">
-                <i className="bi bi-facebook btn text-white btn-floating m-1"></i>
-                <i className="bi bi-twitter btn text-white btn-floating m-1"></i>
-                <i className="bi bi-google btn text-white btn-floating m-1"></i>
-                <i className="bi bi-instagram btn text-white btn-floating m-1"></i>
+
+      <div className="container container-about">
+        <div className="row row-cols-1 row-cols-lg-2 g-5 mb-5">
+          <div className="col">
+            <div className="card card-duracion-tecnologias shadow">
+              <span className="p-2 rounded icon-about">
+                <i className="fs-5 bi bi-clock text-white"></i>
+              </span>
+              <div className="card-body mt-3">
+                <h5 className="card-title">Duración</h5>
+                <p className="card-about fs-5">
+                  Hackflix es un proyecto de streaming de películas desarrollado a lo largo de un
+                  bootcamp, con la selección de contenidos a través de la API de The Movie Database.
+                  Diseño de una interfaz intuitiva para proporcionar una experiencia atractiva a los
+                  usuarios.
+                </p>
               </div>
-              <div class="text-center p-3 copyright">
-                <small className="footer-element">© 2023 Copyright:</small>
-                <small class="text-center p-3 footer-element">Virginia Barbaro</small>
+            </div>
+          </div>
+          <div className="col">
+            <div className="card card-duracion-tecnologias shadow">
+              <span className="p-2 rounded icon-about">
+                <i className="fs-5 bi bi-code-square text-white"></i>
+              </span>
+              <div className="card-body mt-3">
+                <h5 className="card-title">Tecnologías</h5>
+                <p className="card-about fs-5">
+                  Desarrollé una plataforma de streaming interamente con herramientas de Front-End,
+                  usando las siguientes tecnológias: <strong>React, Redux, React Bootstrap y Bootstrap</strong>. <strong>Git, GitHub</strong> para la gestión de archivos y para alojamiento he
+                  utilizado <strong>Vercel.</strong>
+                </p>
               </div>
             </div>
           </div>
         </div>
+        <hr className="text-light" />
+        <div className="col-sm-7 col-md-6 col-lg-5 col-xl-5 col-xxl-4 m-auto card-body-foto">
+          <div className="card border-0 p-3">
+            <img src="foto_linkedin.jpg" className="img-team shadow mx-auto" alt="..." />
+            <div className="card-body text-center">
+              <h3 className="card-title">Virginia Barbaro</h3>
+              <p className="card-text fw-bold fs-5">Full Stack Developer Jr.</p>
+            </div>
+
+            <div className="icons-team text-center">
+              <Link to="https://www.linkedin.com/in/virginia-barbaro/"
+                target="_blank"
+                className="text-black"
+              >
+                <i className="bi bi-linkedin me-2"></i>
+              </Link>
+              <Link to="https://github.com/VirginiaBarbaro" target="_blank" className="text-black">
+                <i className="bi bi-github me-2"></i>
+              </Link>
+              <Link
+                to="mailto:virginiabarbaro@icloud.com?subject=&body=Hola,%20quiero%20contactarte"
+                target="_blank"
+                className="text-black"
+              >
+                <i className="bi bi-envelope-fill "></i>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <Footer />
     </>
   );
 }

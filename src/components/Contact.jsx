@@ -3,6 +3,7 @@ import TextField from "@mui/material/TextField";
 import FormControl from "@mui/material/FormControl";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import Footer from "./Footer"
 
 function Contact() {
   return (
@@ -48,16 +49,20 @@ function Contact() {
                 className="my-2"
                 name="stock"
               />
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between mt-4">
+                <div>
+
                 <Link to="/" className="back-home-contact mt-4">
                   <i className="bi bi-arrow-left text-light back-home-contact"></i>
                 </Link>
-                <button type="button" class="btn btn-outline-success btn-send-contact">Send</button>
+                </div>
+                <button type="button" className="btn btn-success btn-send">Send</button>
               </div>
             </FormControl>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

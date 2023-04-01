@@ -7,7 +7,6 @@ import Header from "./Header";
 
 function MovieList() {
   const [films, setFilms] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
 
   async function fetchData() {
@@ -23,8 +22,7 @@ function MovieList() {
       console.log(err);
     }
   }
-
-  // llamo la funcion fetch data al montar el componente
+  
   useEffect(() => {
     fetchData();
   }, []);

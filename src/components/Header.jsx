@@ -49,7 +49,7 @@ function Header() {
                   </li>
                   <li className="nav-item home-list">
                     <Link to="/about-us" className="home" aria-current="page">
-                      About us
+                      About project
                     </Link>
                   </li>
                   <li className="nav-item home-list">

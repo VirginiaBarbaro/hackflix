@@ -5,6 +5,8 @@ import axios from "axios";
 import Movie from "./Movie";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Header from "./Header";
+import TextField from "@mui/material/TextField";
+import FormControl from "@mui/material/FormControl";
 
 function FilteredFilms() {
   const [rating, setRating] = useState(3);
@@ -64,11 +66,6 @@ function FilteredFilms() {
     searchByTitle();
   }, []);
 
-  // const handleSearch = (e) => {
-  //   setTitle(e.target.value)
-  //   console.log("Busqueda: " + e.target.value)
-  // }
-
   const searcher = (e) => {
     setSearch(e.target.value);
     console.log(e.target.value);
@@ -78,35 +75,28 @@ function FilteredFilms() {
     film.title.toLowerCase().includes(search.toLowerCase()),
   );
 
-  // const results = [];
-  // if (!search) {
-  //   results = filteredFilms
-  // }
-
-  // onSubmit={(event)
-  // (event) => setTitle(event.target.value)
-
   return (
     <>
-    <Header />
+      <Header />
       <div className="row">
-        <div className="text-center form-rating">
-          <form>
-            <label className="label-search">
-              <i className="bi bi-search"></i>
-            </label>
-            <input
-              placeholder="Search..."
-              className="input-search"
-              type="text"
+        <div className="text-center form-rating col-8 mx-auto">
+          <FormControl className="form-control-contact searcher-form">
+            <label htmlFor="search" id="searcher"></label>
+            <TextField
+              id="standard-basic"
+              label="Search"
+              variant="standard"
+              className="my-2 input-form"
+              name="name"
               onChange={searcher}
               value={search}
             />
-            <button className="badge rounded-pill text-bg-success btn-search" type="submit">
-              Search
-            </button>
-          </form>
-          <Rating onClick={(value) => handleRating(value)} initialValue={rating} />
+          </FormControl>
+          <Rating
+            onClick={(value) => handleRating(value)}
+            initialValue={rating}
+            fillColor="green"
+/>
         </div>
         <div className="container">
           <InfiniteScroll
@@ -133,7 +123,6 @@ function FilteredFilms() {
             }
           >
             <div className="row">
-              {/* <div className="col-4"> */}
               {filteredResults.map((film) => {
                 return (
                   <div key={film.id} className="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -143,7 +132,6 @@ function FilteredFilms() {
                   </div>
                 );
               })}
-              {/* </div> */}
             </div>
           </InfiniteScroll>
         </div>

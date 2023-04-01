@@ -1,21 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import { useRef } from "react";
 
 function Carousel() {
-
-  const AutoPlayMethods = () => {
-    const sliderRef = useRef(null);
-
-    const play = () => {
-      sliderRef.current.slickPlay();
-    };
-
-    const pause = () => {
-      sliderRef.current.slickPause();
-    };
-  };
-
   const settings = {
     dots: true,
     infinite: true,
@@ -26,7 +12,7 @@ function Carousel() {
     nextArrow: false,
     autoplay: true,
     autoplaySpeed: 1500,
-    arrows: false, 
+    arrows: false,
     responsive: [
       {
         breakpoint: 1200,
@@ -60,7 +46,7 @@ function Carousel() {
       <Slider {...settings}>
         <div className="container-carousel">
           <img
-            src="https://image.tmdb.org/t/p/original/askg3SMvhqEl4OL52YuvdtY40Yb.jpg"
+            src="https://image.tmdb.org/t/p/original/hT9ZUwLN5tB2O7miBu1oIMJFqJT.jpg"
             className="img-fluid w-100 img-carousel"
             alt="image-film"
           />
@@ -68,15 +54,21 @@ function Carousel() {
         </div>
         <div className="container-carousel">
           <img
-            src="https://image.tmdb.org/t/p/original/qjGrUmKW78MCFG8PTLDBp67S27p.jpg"
+            src="https://image.tmdb.org/t/p/original/ovM06PdF3M8wvKb06i4sjW3xoww.jpg"
             className="img-fluid w-100 img-carousel"
             alt="image-film"
           />
-          
         </div>
         <div className="container-carousel">
           <img
-            src="https://image.tmdb.org/t/p/original/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg"
+            src="https://image.tmdb.org/t/p/original/muw9YsAsSd3DDRme2OEJJoVqun9.jpg"
+            className="img-fluid w-100 img-carousel"
+            alt="film"
+          />
+        </div>
+        <div className="container-carousel">
+          <img
+            src="https://image.tmdb.org/t/p/original/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg"
             className="img-fluid w-100 img-carousel"
             alt="film"
           />
@@ -84,13 +76,6 @@ function Carousel() {
         <div className="container-carousel">
           <img
             src="https://image.tmdb.org/t/p/original/f8sYAxcM3zRwe4P8cnjKFidq3Jh.jpg"
-            className="img-fluid w-100 img-carousel"
-            alt="film"
-          />
-        </div>
-        <div className="container-carousel">
-          <img
-            src="https://image.tmdb.org/t/p/original/e782pDRAlu4BG0ahd777n8zfPzZ.jpg"
             className="img-fluid w-100 img-carousel"
             alt="film"
           />
