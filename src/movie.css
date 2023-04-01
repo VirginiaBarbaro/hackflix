@@ -11,8 +11,9 @@ body {
 }
 
 .details-movie {
+  border: 1px solid red !important;
   border: none;
-  background-color: #202020;
+  background-color: transparent;
 }
 
 .big-container {
