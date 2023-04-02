@@ -13,7 +13,7 @@ function Footer() {
                 <li>Media Center</li>
                 <li>Ways to Watch</li>
                 <li>Gift cards</li>
-                <li>Cookie Preferences</li>
+                <li>Cookie</li>
                 <li>Speed Test</li>
               </ul>
             </div>
@@ -22,7 +22,7 @@ function Footer() {
                 <li>Help Center</li>
                 <li>Investor Relations</li>
                 <li>Terms of Use</li>
-                <li>Corporate Information</li>
+                <li>Corporate</li>
                 <li>Comfort Guide</li>
                 <li>FAQ</li>
               </ul>
@@ -32,15 +32,14 @@ function Footer() {
                 <li>Contact Us</li>
                 <li>Careers</li>
                 <li>Privacy Policy</li>
-                <li>Do Not Sell My Information</li>
-                <li>Terms and Conditions</li>
+                <li>Conditions</li>
                 <li>Only on Hackflix</li>
               </ul>
             </div>
           </div>
         </div>
         <div className="col-4">
-          <div className="d-flex flex-column justify-content-center align-items-center h-100">
+          <div className="d-flex flex-column justify-content-around align-items-center h-100">
             <div className="input-group d-flex justify-content-center mb-3">
               <Link to="/">
                 <button
@@ -52,15 +51,10 @@ function Footer() {
                 </button>
               </Link>
             </div>
-            <p className="mb-5 footer-text">
-              Enjoy unlimited entertainment at Hackflix. Your go-to destination for the latest and
-              greatest movies
-            </p>
             <div>
               <i className="bi bi-instagram me-2 fs-5"></i>
               <i className="bi bi-twitter me-2 fs-5"></i>
               <i className="bi bi-facebook me-2 fs-5"></i>
-              <i className="bi bi-pinterest me-2 fs-5"></i>
             </div>
           </div>
         </div>

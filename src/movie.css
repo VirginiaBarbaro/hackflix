@@ -162,6 +162,7 @@ body {
   color: #fcf9be;
 }
 
+
 .label-search {
   color: #fcf9be;
   padding: 10px;
@@ -219,6 +220,22 @@ body {
   backdrop-filter: blur(20px);
   text-align: center;
   border-radius: 10px;
+}
+
+@media (max-width: 972px) {
+#container-img {
+  padding: 2rem;
+} 
+
+.input-form {
+  color: wheat !important;
+}
+  
+}
+
+.navbar-toggler {
+  color: wheat !important;
+  background-color: rgba(255, 255, 255, 0.486);
 }
 
 .css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
