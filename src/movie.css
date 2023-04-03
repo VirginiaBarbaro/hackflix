@@ -11,6 +11,8 @@ body {
   background-color: #111;
 }
 
+/* Movie Details  */
+
 .details-movie {
   border: none;
   background-color: transparent;
@@ -33,16 +35,14 @@ body {
   text-transform: uppercase;
 }
 
-.card p {
-  line-height: 1.6rem;
-}
-
 @media (min-width: 768px) {
   .card {
     display: flex;
     flex-direction: column;
   }
 }
+
+/* Movie  */
 
 .movie {
   margin-top: 15px;
@@ -57,24 +57,21 @@ body {
   transform: scale(1.1);
 }
 
-.img {
-  cursor: pointer;
-}
-
 .img:hover {
   box-shadow: 0 0 25px rgb(33, 192, 19);
 }
 
-.header {
-  justify-content: center;
-  align-items: center;
+@media (max-width: 972px) {
+  #container-img {
+    padding: 2rem;
+  }
 }
 
-.not-found {
-  margin: auto;
-  margin-top: 3rem;
-  font-size: 1.2rem;
+.card-film {
+  position: relative;
 }
+
+/* Carousel  */
 
 .img-carousel {
   aspect-ratio: 16/9;
@@ -104,6 +101,8 @@ body {
   }
 }
 
+/* Navbar */
+
 .hackflix-navbar {
   color: green;
 }
@@ -118,37 +117,33 @@ body {
   color: rgb(45, 197, 45);
 }
 
-.detail-description {
-  margin-top: 60px;
-  margin-bottom: 70px;
-  color: #f5f5f5;
+.navbar-toggler {
+  border: none;
 }
 
-.middle-div {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
+.navbar-header {
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  background-color: #111;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 0.5164081990217962) 0%,
+    rgba(35, 156, 61, 0.77) 69%
+  );
 }
 
-.hero-container {
-  text-align: center;
-}
+/* General  */
 
 .spinner {
   margin-top: 30px;
   text-align: center;
 }
 
-.btn-noMatch {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.about-title {
-  width: 72%;
-  align-items: center;
-  color: #fcf9be;
-}
+/* Page 404  */
 
 .error {
   width: 100vw;
@@ -156,50 +151,23 @@ body {
   background-color: white;
 }
 
-.label-contact {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: #fcf9be;
-}
-
-.label-search {
-  color: #fcf9be;
-  padding: 10px;
-  font-size: 1.3rem;
-}
-
-.contact-form {
-  border-radius: 10px;
-  width: 60%;
-  margin: auto;
-  padding: 20px;
-  background-color: #24303c;
-  box-shadow: 7px 13px 37px #000;
-}
-
-.h1-contact {
-  color: green;
-  width: 20%;
-  text-align: center;
-  margin: auto;
-  margin-bottom: 50px;
-  margin-top: 15px;
-}
-
-.btn-contact {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-}
+/* Filtred Film  */
 
 .form-rating {
-  margin-top: 4rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   justify-content: baseline;
 }
+
+@media (max-width: 576px) {
+  .form-rating {
+    flex-wrap: wrap;
+    display: block;
+  }
+}
+
+/* Contact us */
 
 .css-1c2i806-MuiFormLabel-root-MuiInputLabel-root {
   color: #f5f5f5 !important;
@@ -222,17 +190,9 @@ body {
 }
 
 @media (max-width: 972px) {
-  #container-img {
-    padding: 2rem;
-  }
-
   .input-form {
     color: wheat !important;
   }
-}
-
-.navbar-toggler {
-  border: none;
 }
 
 .css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
@@ -255,37 +215,11 @@ body {
   color: #fcf9be !important;
 }
 
-@media (max-width: 576px) {
-  .form-rating {
-    flex-wrap: wrap;
-    display: block;
-  }
-}
-
 .back-home-contact:hover {
   color: green !important;
 }
 
-.input-search {
-  padding: 7px;
-  margin-top: 13px;
-  border-radius: 15px;
-  height: 50%;
-}
-
-.label-search {
-  text-align: center;
-}
-
-.btn-search {
-  margin: 13px;
-  height: 50%;
-}
-
-.footer {
-  padding: 10px;
-  width: 100%;
-}
+/* Footer  */
 
 .icon-footer {
   text-align: center;
@@ -302,63 +236,6 @@ body {
   font-size: 1rem;
 }
 
-.icon-copyright {
-  margin-top: 115px;
-  width: 100%;
-}
-
-.container-movieList {
-  padding: 0;
-  margin: 0;
-  max-width: 100%;
-}
-
-/* .main-noMatch {
-    width: 100%;
-    background-image: url("https://images.unsplash.com/photo-1566320238645-032c8c55845a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
-} */
-
-/* Probando Blur */
-
-.rating {
-  position: absolute;
-  z-index: 1;
-  left: 25%;
-  width: 50%;
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 25px rgb(20, 8, 5);
-  backdrop-filter: blur(5px);
-  font-size: 1.2rem;
-  color: rgb(25, 154, 2);
-  /* display: grid;
-  place-items: center; */
-}
-
-.card-film {
-  position: relative;
-}
-
-/* Navbar  */
-
-.navbar-header {
-  position: sticky;
-  top: 0px;
-  z-index: 100;
-  background-color: #111;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 0.5164081990217962) 0%,
-    rgba(35, 156, 61, 0.77) 69%
-  );
-}
-
-/* Footer style */
-
 .footer {
   margin-top: 5.5rem;
   font-size: 1.1rem;
@@ -369,14 +246,6 @@ body {
     #111 0%,
     rgba(35, 156, 61, 0.77) 69%
   );
-}
-
-.footer input {
-  font-weight: 300;
-}
-
-.footer button {
-  font-weight: 300;
 }
 
 .footer-container {
@@ -394,10 +263,6 @@ body {
   font-weight: 300;
 }
 
-/* .footer-cta {
-  background-color: green !important;
-} */
-
 .footer-cta:hover {
   background-color: #ca1717ad !important;
   color: #f5f5f5;
@@ -407,9 +272,14 @@ body {
   background-color: #111111b3;
 }
 
-.footer-text {
-  color: rgba(255, 255, 255, 0.791);
+/* Movie List  */
+
+.container-movieList {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
 }
+
 
 /* about project  */
 

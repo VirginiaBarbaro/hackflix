@@ -78,67 +78,69 @@ function FilteredFilms() {
   return (
     <>
       <Header />
-      <div className="row">
-        <div className="text-center form-rating col-8 mx-auto">
-          <div className="form-control-contact searcher-form">
-            <form className="mb-4">
-              <label htmlFor="inputAddress" className="form-label text-light fs-4">
-              <i className="bi bi-search"></i> Search 
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Type a title"
-                name="title"
-                id="title"
-                value={search}
-                onChange={searcher}
-                required
-              />
-            </form>
-          </div>
-          <Rating
-            onClick={(value) => handleRating(value)}
-            initialValue={rating}
-            fillColor="green"
-          />
-        </div>
-        <div className="container">
-          <InfiniteScroll
-            dataLength={filteredFilms.length} //This is important field to render the next data
-            next={handleNextPage}
-            hasMore={true}
-            style={{ overflow: "hidden" }}
-            loader={
-              <div className="spinner">
-                <button className="btn btn-success" type="button" disabled>
-                  <span
-                    className="spinner-grow spinner-grow-sm"
-                    role="status"
-                    aria-hidden="true"
-                  ></span>
-                  Loading...
-                </button>
-              </div>
-            }
-            endMessage={
-              <p style={{ textAlign: "center" }}>
-                <b>Yay! You have seen it all</b>
-              </p>
-            }
-          >
-            <div className="row">
-              {filteredResults.map((film) => {
-                return (
-                  <div key={film.id} className="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div>
-                      <Movie film={film} />
-                    </div>
-                  </div>
-                );
-              })}
+      <div className="container">
+        <div className="row">
+          <div className="text-center form-rating col-8 mx-auto">
+            <div className="form-control-contact searcher-form">
+              <form className="mb-4">
+                <label htmlFor="inputAddress" className="form-label text-light fs-4">
+                  <i className="bi bi-search"></i> Search
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Type a title"
+                  name="title"
+                  id="title"
+                  value={search}
+                  onChange={searcher}
+                  required
+                />
+              </form>
             </div>
-          </InfiniteScroll>
+            <Rating
+              onClick={(value) => handleRating(value)}
+              initialValue={rating}
+              fillColor="green"
+            />
+          </div>
+          <div className="container">
+            <InfiniteScroll
+              dataLength={filteredFilms.length} //This is important field to render the next data
+              next={handleNextPage}
+              hasMore={true}
+              style={{ overflow: "hidden" }}
+              loader={
+                <div className="spinner">
+                  <button className="btn btn-success" type="button" disabled>
+                    <span
+                      className="spinner-grow spinner-grow-sm"
+                      role="status"
+                      aria-hidden="true"
+                    ></span>
+                    Loading...
+                  </button>
+                </div>
+              }
+              endMessage={
+                <p style={{ textAlign: "center" }}>
+                  <b>Yay! You have seen it all</b>
+                </p>
+              }
+            >
+              <div className="row">
+                {filteredResults.map((film) => {
+                  return (
+                    <div key={film.id} className="col-12 col-sm-6 col-md-4 col-lg-3">
+                      <div>
+                        <Movie film={film} />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </InfiniteScroll>
+          </div>
         </div>
       </div>
     </>

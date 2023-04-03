@@ -14,7 +14,6 @@ function Footer() {
                 <li>Ways to Watch</li>
                 <li>Gift cards</li>
                 <li>Cookie</li>
-                <li>Speed Test</li>
               </ul>
             </div>
             <div className="col-4">
@@ -24,7 +23,6 @@ function Footer() {
                 <li>Terms of Use</li>
                 <li>Corporate</li>
                 <li>Comfort Guide</li>
-                <li>FAQ</li>
               </ul>
             </div>
             <div className="col-4">
