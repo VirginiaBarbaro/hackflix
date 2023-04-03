@@ -80,23 +80,28 @@ function FilteredFilms() {
       <Header />
       <div className="row">
         <div className="text-center form-rating col-8 mx-auto">
-          <FormControl className="form-control-contact searcher-form">
-            <label htmlFor="search" id="searcher"></label>
-            <TextField
-              id="standard-basic"
-              label="Search"
-              variant="standard"
-              className="my-2 input-form"
-              name="name"
-              onChange={searcher}
-              value={search}
-            />
-          </FormControl>
+          <div className="form-control-contact searcher-form">
+            <form className="mb-4">
+              <label htmlFor="inputAddress" className="form-label text-light fs-4">
+              <i className="bi bi-search"></i> Search 
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Type a title"
+                name="title"
+                id="title"
+                value={search}
+                onChange={searcher}
+                required
+              />
+            </form>
+          </div>
           <Rating
             onClick={(value) => handleRating(value)}
             initialValue={rating}
             fillColor="green"
-/>
+          />
         </div>
         <div className="container">
           <InfiniteScroll
