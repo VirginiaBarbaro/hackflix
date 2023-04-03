@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../movie.css";
 import Container from "react-bootstrap/Container";
@@ -8,25 +7,8 @@ import Navbar from "react-bootstrap/Navbar";
 
 function Header() {
 
-  const [isScrolling, setIsScrolling] = useState(false)
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const handleScroll = () => {
-    if (window.pageYOffset === 0) {
-      setIsScrolling(false);
-    } else {
-      setIsScrolling(true);
-    }
-  };
-
   return (
-    <Navbar expand="lg"className={`navbar ${isScrolling ? "navbar-dynamic" : "navbar-static"}`}>
+    <Navbar expand="lg"className="navbar-header">
       <Container className="general-container">
           <Navbar.Brand>
             {" "}
