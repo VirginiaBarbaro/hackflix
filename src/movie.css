@@ -169,8 +169,19 @@ body {
 
 /* Contact us */
 
-.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root {
-  color: #f5f5f5 !important;
+.input-form-text {
+  border-radius: 20px;
+  background: linear-gradient(
+    85deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111 0%,
+    rgba(35, 156, 61, 0.77) 69%
+  );
+}
+
+.input-form-text::placeholder {
+  color: rgba(255, 255, 255, 0.778);
 }
 
 .form-control-contact {
@@ -182,7 +193,6 @@ body {
 }
 
 .formulary {
-  padding: 3rem 1.5rem 3rem 1.5rem;
   background-color: #3a3d399d;
   backdrop-filter: blur(20px);
   text-align: center;
@@ -193,26 +203,6 @@ body {
   .input-form {
     color: wheat !important;
   }
-}
-
-.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
-  color: green !important;
-}
-
-.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
-  color: #f5f5f5b9 !important;
-}
-
-.css-v4u5dn-MuiInputBase-root-MuiInput-root::after {
-  border-bottom: 2px solid green !important;
-}
-
-.css-v4u5dn-MuiInputBase-root-MuiInput-root::before {
-  border-bottom: 2px solid #f5f5f5b9 !important;
-}
-
-.css-v4u5dn-MuiInputBase-root-MuiInput-root {
-  color: #fcf9be !important;
 }
 
 .back-home-contact:hover {
@@ -279,7 +269,6 @@ body {
   margin: 0;
   max-width: 100%;
 }
-
 
 /* about project  */
 
