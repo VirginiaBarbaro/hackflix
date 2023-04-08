@@ -50,6 +50,10 @@ function Carousel() {
             className="img-fluid w-100 img-carousel"
             alt="image-film"
           />
+          {/* <div className="prueba">
+            <h1 className="text-red title-carousel">Title</h1>
+            <p className="text-red">Description</p>
+          </div> */}
           <div className="carousel-fade"></div>
         </div>
         <div className="container-carousel">
