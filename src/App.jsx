@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import MovieDetails from "./components/MovieDetails";
 import NoMatch from "./components/NoMatch";
 import AboutUs from "./components/AboutUs";
-import Contact from "./components/Contact";
 import FilteredFilms from "./components/FiltreredFilm";
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
         <Route path="/" element={<MovieList />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/filtered-by-rating" element={<FilteredFilms />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
