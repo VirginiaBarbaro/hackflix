@@ -5,8 +5,6 @@ import axios from "axios";
 import Movie from "./Movie";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Header from "./Header";
-import TextField from "@mui/material/TextField";
-import FormControl from "@mui/material/FormControl";
 
 function FilteredFilms() {
   const [rating, setRating] = useState(3);
@@ -23,8 +21,9 @@ function FilteredFilms() {
       https://api.themoviedb.org/3/discover/movie?api_key=8616bd50fe3be649603bd33d955499f3&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&vote_average.gte=${
           rating * 2 - 2
         }&vote_average.lte=${rating * 2}
-      &with_watch_monetization_types=flatrate`,
+      &with_watch_monetization_types=flatrate`
       );
+      console.log(response.data);
       setFilteredFilms((prevFilms) => [...prevFilms, ...response.data.results]);
       setIsLoading(false);
     };
@@ -38,7 +37,7 @@ function FilteredFilms() {
       https://api.themoviedb.org/3/discover/movie?api_key=8616bd50fe3be649603bd33d955499f3&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&vote_average.gte=${
           rating * 2 - 2
         }&vote_average.lte=${rating * 2}
-      &with_watch_monetization_types=flatrate`,
+      &with_watch_monetization_types=flatrate`
       );
       setFilteredFilms(response.data.results);
       setIsLoading(false);
@@ -58,7 +57,7 @@ function FilteredFilms() {
 
   const searchByTitle = async () => {
     const response = await axios.get(`
-    https://api.themoviedb.org/3/search/movie?api_key=8616bd50fe3be649603bd33d955499f3&language=en-US&query=title${title}&include_adult=false`);
+    https://api.themoviedb.org/3/search/movie?api_key=8616bd50fe3be649603bd33d955499f3&language=en-US&query=${title}&include_adult=false`);
     setTitle(response.data.results);
   };
 
@@ -72,7 +71,7 @@ function FilteredFilms() {
   };
 
   const filteredResults = filteredFilms.filter((film) =>
-    film.title.toLowerCase().includes(search.toLowerCase()),
+    film.title.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -83,7 +82,10 @@ function FilteredFilms() {
           <div className="text-center form-rating col-8 mx-auto">
             <div className="form-control-contact searcher-form">
               <form className="mb-4">
-                <label htmlFor="inputAddress" className="form-label text-light fs-4">
+                <label
+                  htmlFor="inputAddress"
+                  className="form-label text-light fs-4"
+                >
                   <i className="bi bi-search"></i> Search
                 </label>
                 <input
@@ -131,7 +133,10 @@ function FilteredFilms() {
               <div className="row">
                 {filteredResults.map((film) => {
                   return (
-                    <div key={film.id} className="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div
+                      key={film.id}
+                      className="col-12 col-sm-6 col-md-4 col-lg-3"
+                    >
                       <div>
                         <Movie film={film} />
                       </div>
