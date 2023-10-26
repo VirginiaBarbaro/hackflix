@@ -19,8 +19,8 @@ function FilteredFilms() {
       const response = await axios.get(
         `
       https://api.themoviedb.org/3/discover/movie?api_key=8616bd50fe3be649603bd33d955499f3&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&vote_average.gte=${
-          rating * 2 - 2
-        }&vote_average.lte=${rating * 2}
+        rating * 2 - 2
+      }&vote_average.lte=${rating * 2}
       &with_watch_monetization_types=flatrate`
       );
       console.log(response.data);
@@ -35,8 +35,8 @@ function FilteredFilms() {
       const response = await axios.get(
         `
       https://api.themoviedb.org/3/discover/movie?api_key=8616bd50fe3be649603bd33d955499f3&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&vote_average.gte=${
-          rating * 2 - 2
-        }&vote_average.lte=${rating * 2}
+        rating * 2 - 2
+      }&vote_average.lte=${rating * 2}
       &with_watch_monetization_types=flatrate`
       );
       setFilteredFilms(response.data.results);
@@ -65,9 +65,8 @@ function FilteredFilms() {
     searchByTitle();
   }, []);
 
-  const searcher = (e) => {
+  const handleSearchChange = (e) => {
     setSearch(e.target.value);
-    console.log(e.target.value);
   };
 
   const filteredResults = filteredFilms.filter((film) =>
@@ -95,7 +94,7 @@ function FilteredFilms() {
                   name="title"
                   id="title"
                   value={search}
-                  onChange={searcher}
+                  onChange={handleSearchChange}
                   required
                 />
               </form>
